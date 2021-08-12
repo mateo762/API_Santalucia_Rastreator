@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "c418231d-bb95-44a9-839d-8dfdb7838357",
+		"name": "SANTA LUCIA APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API BUSQUEDA DECESOS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"codigoPostal\": 41012,\r\n   \"fechasNacimiento\": [\"1948-10-17\",\"1944-08-17\",\"1978-10-17\",\"1975-10-17\"]\r\n}"
+				},
+				"url": {
+					"raw": "http://gz-santalucia-apis.herokuapp.com/api/busqueda/decesos",
+					"protocol": "http",
+					"host": [
+						"gz-santalucia-apis",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"busqueda",
+						"decesos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API BUSQUEDA HOGAR",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"vivienda\": \"P\",\r\n    \"madera\": true,\r\n    \"codigoPostal\": 41012,\r\n    \"fechaNacimiento\": \"1988-10-17\",\r\n    \"propietario\": \"P\",\r\n    \"usoVivienda\": \"P\",\r\n    \"nucleoUrbano\": true,\r\n    \"prestamoHipotecario\": true,\r\n    \"aseos\": 2,\r\n    \"metrosVivienda\": \"95\",\r\n    \"anyoConstruccion\": \"1997\",\r\n    \"importeContinente\": 70000,\r\n    \"importeContenido\": 27090\r\n}"
+				},
+				"url": {
+					"raw": "https://gz-santalucia-apis.herokuapp.com/api/busqueda/hogar",
+					"protocol": "https",
+					"host": [
+						"gz-santalucia-apis",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"busqueda",
+						"hogar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
